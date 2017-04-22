@@ -42,7 +42,7 @@ tools:context="itesm.mobilestore711.LoginActivity">
         android:hint="Usuario"
         android:inputType="textPersonName"
         android:textColor="@android:color/black"
-        android:textColorHint="#000" />
+        android:textColorHint="@color/hintColor" />
 
 <ImageView
     android:layout_width="wrap_content"
@@ -66,7 +66,7 @@ tools:context="itesm.mobilestore711.LoginActivity">
         android:hint="Contraseña"
         android:inputType="textPassword"
         android:textColor="@android:color/black"
-        android:textColorHint="#000" />
+        android:textColorHint="@color/hintColor" />
 
 <Button
     android:text="Iniciar Sesión"

@@ -82,8 +82,8 @@ public class LoginActivity extends AppCompatActivity {
                         app = (MobileStoreApp) getApplicationContext();
                         app.setUserInformation(userInfo);
 
-                        Intent homePageIntent = new Intent(LoginActivity.this,HomePageActivity.class);
-                        LoginActivity.this.startActivity(homePageIntent);
+                        Intent storeIntent = new Intent(LoginActivity.this,StoreActivity.class);
+                        LoginActivity.this.startActivity(storeIntent);
 
                     }else{
                         displayMessage("Inicio de Sesión Fallido.");

@@ -20,7 +20,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".HomePageActivity"></activity>
+        <activity android:name=".HomePageActivity" />
+        <activity android:name=".UserInformationActivity" />
+        <activity android:name=".OrderActivity" />
+        <activity android:name=".CartActivity" />
+        <activity android:name=".StoreActivity"></activity>
     </application>
 
 </manifest>

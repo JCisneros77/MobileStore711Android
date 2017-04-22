@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context="itesm.mobilestore711.StoreActivity">
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/ic_7_eleven_brand"
+        android:id="@+id/iv_711_logo_store"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_pick_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_711_logo_store"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Escoge tu tienda"
+        android:textColor="@color/Green711"
+        android:textSize="40dp" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_alignEnd="@+id/tv_pick_store"
+        android:layout_alignStart="@+id/tv_pick_store"
+        android:layout_below="@+id/tv_pick_store"
+        android:background="@drawable/spinner_background"
+        android:orientation="horizontal"
+        android:id="@+id/rl_spinner">
+
+
+        <Spinner
+            android:id="@+id/sp_stores"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_dropdown" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textColor="@color/Orange711"
+        android:textSize="25dp"
+        android:layout_marginTop="11dp"
+        android:layout_below="@id/rl_spinner"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/rl_spinner" />
+
+    <TextView
+        android:id="@+id/tv_name_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Nombre"
+        android:layout_marginLeft="14dp"
+        android:textColor="@color/Red711"
+        android:textSize="20dp"
+        android:layout_below="@+id/tv_name_title"
+        android:layout_alignStart="@+id/tv_name_title" />
+
+    <TextView
+        android:id="@+id/tv_address_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="11dp"
+        android:text="Dirección"
+        android:textColor="@color/Orange711"
+        android:textSize="25dp"
+        android:layout_below="@+id/tv_name_store"
+        android:layout_toStartOf="@+id/iv_711_logo_store" />
+
+    <TextView
+        android:id="@+id/tv_phone_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_address_title"
+        android:layout_below="@+id/tv_address_store"
+        android:layout_marginTop="11dp"
+        android:text="Teléfono"
+        android:textColor="@color/Orange711"
+        android:textSize="25dp" />
+
+    <TextView
+        android:id="@+id/tv_address_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tv_name_store"
+        android:layout_below="@+id/tv_address_title"
+        android:layout_marginTop="11dp"
+        android:text="Dirección"
+        android:textColor="@color/Red711"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/tv_phone_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_phone_title"
+        android:layout_alignStart="@+id/tv_name_store"
+        android:layout_marginTop="11dp"
+        android:text="Teléfono"
+        android:textColor="@color/Red711"
+        android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/btn_confirm_store"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:background="@color/Green711"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Confirmar"
+        android:textColor="#000" />
+
+
+</RelativeLayout>

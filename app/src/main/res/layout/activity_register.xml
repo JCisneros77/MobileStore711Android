@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
-    tools:context="itesm.mobilestore711.LoginActivity">
+    tools:context="itesm.mobilestore711.RegisterActivity">
 
     <ImageView
         android:layout_width="100dp"
@@ -81,7 +81,7 @@
         android:layout_alignTop="@+id/iv_icon_name"
         android:layout_alignStart="@+id/iv_icon_name"
         android:layout_alignEnd="@+id/tv_register"
-        android:textColorHint="#000"/>
+        android:textColorHint="@color/hintColor"/>
 
     <EditText
         android:id="@+id/tf_username_register"
@@ -91,7 +91,7 @@
         android:layout_alignBottom="@+id/iv_icon_username"
         android:layout_alignStart="@+id/tf_name_register"
         android:hint="Nombre de Usuario"
-        android:textColorHint="#000"
+        android:textColorHint="@color/hintColor"
         android:inputType="textPersonName"
         android:layout_alignEnd="@+id/tf_name_register" />
 
@@ -101,7 +101,7 @@
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:backgroundTint="@color/Orange711"
-        android:textColorHint="#000"
+        android:textColorHint="@color/hintColor"
         android:hint="Contraseña"
         android:layout_above="@+id/iv_icon_confirm_password"
         android:layout_alignStart="@+id/tf_username_register"
@@ -117,7 +117,7 @@
         android:backgroundTint="@color/Orange711"
         android:hint="Confirmar Contraseña"
         android:inputType="textPassword"
-        android:textColorHint="#000" />
+        android:textColorHint="@color/hintColor" />
 
     <Button
         android:id="@+id/btn_register"

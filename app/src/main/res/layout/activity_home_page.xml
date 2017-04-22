@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="itesm.mobilestore711.HomePageActivity">
+    android:layout_height="match_parent">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_login"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/backgroundColor"
+        tools:context="itesm.mobilestore711.HomePageActivity">
+
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_sidemenu"
+            android:src="@mipmap/ic_sidemenu"
+            android:elevation="5dp"
+            android:background="@android:color/transparent"
+            android:tint="@color/Green711"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="22dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/tv_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/btn_sidemenu"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="10dp"
+            android:text="Productos:"
+            android:textColor="@android:color/black"
+            android:textSize="30dp" />
+
+
+    </RelativeLayout>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_side_bar"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:background="@color/Green711"
+        tools:context="itesm.mobilestore711.LoginActivity"
+        android:layout_gravity="left|start"
+        >
+
+        <ImageView
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:src="@drawable/ic_user_image"
+            android:id="@+id/img_user_avatar"
+            android:elevation="5dp"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:background="@android:color/transparent" />
+
+        <TextView
+            android:id="@+id/tv_name_sidemenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/img_user_avatar"
+            android:layout_centerHorizontal="true"
+            android:text="Nombre"
+            android:textColor="#ffffff"
+            android:textIsSelectable="false"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_username_sidemenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_name_sidemenu"
+            android:layout_centerHorizontal="true"
+            android:text="Username"
+            android:textColor="#ffffff"
+            android:textIsSelectable="false"
+            android:textSize="15sp"/>
+
+        <ListView
+            android:id="@+id/lv_side_menu"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tv_username_sidemenu"
+            android:layout_marginBottom="50dp"
+            android:background="@color/Green711"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:headerDividersEnabled="false"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="5px"
+            />
+
+        <ImageView
+            android:id="@+id/img_small_logo"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ic_7_eleven_brand" />
+
+    </RelativeLayout>
+
+</android.support.v4.widget.DrawerLayout>
