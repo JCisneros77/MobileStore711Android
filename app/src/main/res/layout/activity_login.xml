@@ -13,7 +13,7 @@ tools:context="itesm.mobilestore711.LoginActivity">
     android:layout_height="wrap_content"
     android:src="@drawable/ic_7_eleven_brand"
     android:id="@+id/iv_711_logo"
-    android:layout_above="@+id/tf_username"
+    android:layout_above="@+id/tf_username_register"
     android:layout_centerHorizontal="true"
     android:layout_marginBottom="10dp"
     android:layout_marginRight="50dp"
@@ -26,12 +26,12 @@ tools:context="itesm.mobilestore711.LoginActivity">
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/iv_711_logo"
-        android:layout_toStartOf="@+id/tf_username"
+        android:layout_toStartOf="@+id/tf_username_register"
         android:src="@mipmap/ic_person"
         android:tint="@color/Red711" />
 
     <EditText
-        android:id="@+id/tf_username"
+        android:id="@+id/tf_username_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/iv_password_logo"
@@ -51,15 +51,15 @@ tools:context="itesm.mobilestore711.LoginActivity">
     android:tint="@color/Red711"
     android:id="@+id/iv_password_logo"
     android:layout_above="@+id/btn_login"
-    android:layout_toStartOf="@+id/tf_password" />
+    android:layout_toStartOf="@+id/tf_password_register" />
 
 
     <EditText
-        android:id="@+id/tf_password"
+        android:id="@+id/tf_password_register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/tf_username"
-        android:layout_alignTop="@+id/tf_username"
+        android:layout_alignStart="@+id/tf_username_register"
+        android:layout_alignTop="@+id/tf_username_register"
         android:layout_marginTop="57dp"
         android:backgroundTint="@color/Orange711"
         android:ems="12"
@@ -77,9 +77,9 @@ tools:context="itesm.mobilestore711.LoginActivity">
     android:textColor="#000"
     android:layout_above="@+id/tv_linkRegister"
     android:layout_centerHorizontal="true"
-    android:backgroundTint="@color/buttonColor"
-    android:paddingRight="25px"
-    android:paddingLeft="25px"  />
+    android:backgroundTint="@color/Green711"
+    android:paddingRight="20dp"
+    android:paddingLeft="20dp"  />
 
     <TextView
         android:id="@+id/tv_linkRegister"

@@ -30,8 +30,8 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login);
 
         // Declare GUI elements
-        final EditText tf_username = (EditText) findViewById(R.id.tf_username);
-        final EditText tf_password = (EditText) findViewById(R.id.tf_password);
+        final EditText tf_username = (EditText) findViewById(R.id.tf_username_register);
+        final EditText tf_password = (EditText) findViewById(R.id.tf_password_register);
         final Button btn_login = (Button) findViewById(R.id.btn_login);
         final TextView tv_link_register =(TextView) findViewById(R.id.tv_linkRegister);
 

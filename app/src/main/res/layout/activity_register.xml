@@ -1,9 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="itesm.mobilestore711.RegisterActivity">
+    android:background="@color/backgroundColor"
+    tools:context="itesm.mobilestore711.LoginActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="23dp"
+        android:src="@drawable/ic_7_eleven_brand"
+        android:id="@+id/iv_711_logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_711_logo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="Registro"
+        android:textColor="@color/Green711"
+        android:textSize="40dp" />
+
+    <ImageView
+        android:id="@+id/iv_icon_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_person"
+        android:tint="@color/Red711"
+        android:layout_marginTop="24dp"
+        android:layout_below="@+id/tv_register"
+        android:layout_alignStart="@+id/iv_icon_username" />
+
+    <ImageView
+        android:id="@+id/iv_icon_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="19dp"
+        android:src="@mipmap/ic_person"
+        android:tint="@color/Red711"
+        android:layout_below="@+id/iv_icon_name"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:id="@+id/iv_icon_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:src="@mipmap/ic_lock"
+        android:tint="@color/Red711"
+        android:layout_below="@+id/iv_icon_username"
+        android:layout_alignStart="@+id/iv_icon_username" />
+
+    <ImageView
+        android:id="@+id/iv_icon_confirm_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:src="@mipmap/ic_lock"
+        android:tint="@color/Red711"
+        android:layout_below="@+id/iv_icon_password"
+        android:layout_alignStart="@+id/iv_icon_password" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:id="@+id/tf_name_register"
+        android:hint="Nombre y Apellido"
+        android:layout_marginLeft="60dp"
+        android:backgroundTint="@color/Orange711"
+        android:layout_marginRight="-50dp"
+        android:layout_alignTop="@+id/iv_icon_name"
+        android:layout_alignStart="@+id/iv_icon_name"
+        android:layout_alignEnd="@+id/tv_register"
+        android:textColorHint="#000"/>
+
+    <EditText
+        android:id="@+id/tf_username_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Orange711"
+        android:layout_alignBottom="@+id/iv_icon_username"
+        android:layout_alignStart="@+id/tf_name_register"
+        android:hint="Nombre de Usuario"
+        android:textColorHint="#000"
+        android:inputType="textPersonName"
+        android:layout_alignEnd="@+id/tf_name_register" />
+
+    <EditText
+        android:id="@+id/tf_password_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:backgroundTint="@color/Orange711"
+        android:textColorHint="#000"
+        android:hint="Contraseña"
+        android:layout_above="@+id/iv_icon_confirm_password"
+        android:layout_alignStart="@+id/tf_username_register"
+        android:layout_alignEnd="@+id/tf_username_register" />
+
+    <EditText
+        android:id="@+id/tf_confirm_password_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/iv_icon_confirm_password"
+        android:layout_alignEnd="@+id/tf_password_register"
+        android:layout_alignStart="@+id/tf_password_register"
+        android:backgroundTint="@color/Orange711"
+        android:hint="Confirmar Contraseña"
+        android:inputType="textPassword"
+        android:textColorHint="#000" />
+
+    <Button
+        android:id="@+id/btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:background="@color/Green711"
+        android:text="Registrarme"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:textColor="#000"/>
+
+    <ImageButton
+        android:id="@+id/ib_back_to_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/iv_icon_name"
+        android:layout_alignTop="@+id/iv_711_logo"
+        android:background="@android:color/transparent"
+        android:tint="@color/Green711"
+        app:srcCompat="@mipmap/ic_back" />
+
+</RelativeLayout>
