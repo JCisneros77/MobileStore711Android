@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">MobileStore711</string>
+    <string name="url">http://localhost:3000/</string>
+    <!--<string name="url">https://mobilestore711.herokuapp.com</string> -->
 </resources>
