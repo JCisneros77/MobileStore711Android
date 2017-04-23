@@ -1,5 +1,6 @@
 package itesm.mobilestore711;
 
+import java.text.DecimalFormat;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -40,6 +41,15 @@ public class UserInformation {
 
     public Map<String,ProductModel> getCart() {return cart;}
 
+    public void emptyCart(){
+        cart = new HashMap<>();
+    }
+
+    public void printCart(){
+        for (Map.Entry<String, ProductModel> entry : cart.entrySet())
+            System.out.println(entry.getValue().getName().concat(Integer.toString(entry.getValue().getAmount())));
+    }
+
     public int getProductAmountInCart(String product_id) {
         if (cart.containsKey(product_id))
             return cart.get(product_id).getAmount();
@@ -54,7 +64,17 @@ public class UserInformation {
         }
         else{
             //Product doesn't exist in cart
+
             cart.put(product_id,new ProductModel(product_id,product_name,amount,price));
         }
+    }
+
+    public String getCartTotal(){
+        double cartTotal = 0.0;
+        for (Map.Entry<String, ProductModel> entry : cart.entrySet())
+            cartTotal+= entry.getValue().getAmount() * entry.getValue().getPriceDouble();
+
+        DecimalFormat df = new DecimalFormat("#.00");
+        return df.format(cartTotal);
     }
 }

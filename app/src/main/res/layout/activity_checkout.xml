@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
+    tools:context="itesm.mobilestore711.CheckoutActivity">
+
+    <ImageButton
+        android:id="@+id/ib_back_to_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="22dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_close"
+        android:tint="@color/Green711" />
+
+    <TextView
+        android:id="@+id/tv_order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Orden"
+        android:textColor="@color/Green711"
+        android:textSize="40dp"
+        android:layout_alignTop="@+id/ib_back_to_cart"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_total_price_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="Costo Total:"
+        android:textColor="@color/Orange711"
+        android:textSize="21dp"
+        android:layout_below="@+id/tv_order_title"
+        android:layout_alignStart="@+id/ib_back_to_cart" />
+
+    <TextView
+        android:id="@+id/tv_total_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Costo Total:"
+        android:textColor="@color/Green711"
+        android:textSize="21dp"
+        android:layout_alignBaseline="@+id/tv_total_price_title"
+        android:layout_alignBottom="@+id/tv_total_price_title"
+        android:layout_toEndOf="@+id/tv_order_title" />
+
+    <TextView
+        android:id="@+id/tv_payment_method_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="100dp"
+        android:text="Forma de Pago:"
+        android:textColor="@color/Orange711"
+        android:textSize="21dp"
+        android:layout_below="@+id/tv_total_price_title"
+        android:layout_alignStart="@+id/tv_total_price_title"
+        android:layout_marginTop="41dp" />
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/spinner_background"
+        android:orientation="horizontal"
+        android:layout_marginRight="20dp"
+        android:id="@+id/rl_spinner_payment"
+        android:layout_above="@+id/tv_pickup_time_title"
+        android:layout_alignParentEnd="true">
+        <Spinner
+            android:id="@+id/sp_payment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:spinnerMode="dropdown" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/ic_dropdown" />
+
+    </RelativeLayout>
+
+
+
+    <TextView
+        android:id="@+id/tv_pickup_time_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora de Recolección:"
+        android:textColor="@color/Orange711"
+        android:maxWidth="120dp"
+        android:textSize="21dp"
+        android:layout_marginTop="42dp"
+        android:layout_below="@+id/tv_payment_method_title"
+        android:layout_alignStart="@+id/tv_payment_method_title" />
+
+    <TextView
+        android:id="@+id/tv_note_about_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="120dp"
+        android:text="(Debe ser mínimo 3 horas a partir de ahora)"
+        android:textColor="@color/Red711"
+        android:textSize="11dp"
+        android:layout_below="@+id/tv_pickup_time_title"
+        android:layout_alignStart="@+id/tv_pickup_time_title" />
+
+    <Button
+        android:id="@+id/btn_place_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Green711"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Realizar Pedido"
+        android:textColor="#000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
+
+    <EditText
+        android:id="@+id/et_time_order"
+        android:layout_width="200dp"
+        android:textColor="@color/Green711"
+        android:layout_height="wrap_content"
+        android:editable="false"
+        android:layout_alignBottom="@+id/tv_pickup_time_title"
+        android:layout_alignEnd="@+id/rl_spinner_payment"
+        android:inputType="none" />
+
+</RelativeLayout>

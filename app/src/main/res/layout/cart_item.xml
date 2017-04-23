@@ -28,16 +28,31 @@
         android:layout_centerVertical="true" />
 
     <TextView
-        android:id="@+id/tv_product_item_price"
+        android:id="@+id/tv_cart_item_price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Price"
-        android:textColor="@color/Green711"
-        android:textSize="20sp"
-        android:layout_centerVertical="true"
-        android:layout_marginEnd="40dp"
         android:layout_alignBaseline="@+id/tv_cart_item_name"
         android:layout_alignBottom="@+id/tv_cart_item_name"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="110dp"
+        android:textAlignment="textStart"
+        android:text="Price"
+        android:textColor="@color/Green711"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tv_cart_item_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tv_cart_item_name"
+        android:layout_alignBottom="@+id/tv_cart_item_name"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:textAlignment="textStart"
+        android:layout_marginEnd="40dp"
+        android:text="amount"
+        android:textColor="@color/Green711"
+        android:textSize="20sp" />
 
 </RelativeLayout>

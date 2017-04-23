@@ -8,4 +8,84 @@
     android:background="@color/backgroundColor"
     tools:context="itesm.mobilestore711.CartActivity">
 
+    <ImageButton
+        android:id="@+id/ib_back_to_home_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="22dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_back"
+        android:tint="@color/Green711" />
+
+    <TextView
+        android:id="@+id/tv_cart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="Carrito"
+        android:textColor="@color/Green711"
+        android:textSize="40dp"
+        android:layout_alignTop="@+id/ib_back_to_home_cart"
+        android:layout_centerHorizontal="true" />
+
+    <ListView
+        android:id="@+id/lv_cart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="80dp"
+        android:layout_below="@+id/tv_cart"
+        android:layout_marginTop="54dp" />
+
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/Green711"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:text="Finalizar Orden"
+        android:textColor="#000"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="21dp" />
+
+    <TextView
+        android:id="@+id/tv_amount_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Cantidad"
+        android:textColor="@color/Red711"
+        android:textSize="18dp"
+        android:layout_marginStart="35dp"
+        android:layout_below="@+id/tv_cart"
+        android:layout_toEndOf="@+id/btn_checkout" />
+
+    <TextView
+        android:id="@+id/tv_price_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Precio"
+        android:textColor="@color/Red711"
+        android:textSize="18dp"
+        android:layout_alignBaseline="@+id/tv_amount_title"
+        android:layout_alignBottom="@+id/tv_amount_title"
+        android:layout_alignEnd="@+id/btn_checkout" />
+
+    <TextView
+        android:id="@+id/tv_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre"
+        android:textColor="@color/Red711"
+        android:textSize="18dp"
+        android:layout_alignBaseline="@+id/tv_price_title"
+        android:layout_alignBottom="@+id/tv_price_title"
+        android:layout_toStartOf="@+id/tv_cart" />
+
+
 </RelativeLayout>

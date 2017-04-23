@@ -85,6 +85,7 @@ public class ProductActivity extends AppCompatActivity {
                     displayMessage("No puedes ordenar más producto del que hay disponible.");
                 }
                 else{
+                    displayMessage("Se agregaron ".concat(Integer.toString(np_amount_to_cart.getValue()).concat(" ").concat(name).concat(" al carrito.")));
                     userInfo.addProduct(name,id,np_amount_to_cart.getValue(),price);
                     Intent homeIntent = new Intent(ProductActivity.this, HomePageActivity.class);
                     ProductActivity.this.startActivity(homeIntent);

@@ -25,8 +25,10 @@ public class ProductModel {
 
     public int getAmount(){return amount;}
 
-    public String getPrice(){
+    public double getPriceDouble(){return price;}
+
+    public String getPrice(int amnt){
         DecimalFormat df = new DecimalFormat("#.00");
-        return df.format(price);
+        return df.format(price * amnt);
     }
 }
