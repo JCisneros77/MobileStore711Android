@@ -8,4 +8,75 @@
     android:background="@color/backgroundColor"
     tools:context="itesm.mobilestore711.UserInformationActivity">
 
+    <TextView
+        android:id="@+id/tv_userInfo_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="username"
+        android:textColor="@color/Orange711"
+        android:textSize="20dp"
+        android:layout_below="@+id/tv_userinfo_username_title"
+        android:layout_alignStart="@+id/tv_userInfo_name" />
+
+    <TextView
+        android:id="@+id/tv_userInfo_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="39dp"
+        android:text="nombre"
+        android:textColor="@color/Orange711"
+        android:textSize="20dp"
+        android:layout_below="@+id/tv_userInfo_name_title" />
+
+    <TextView
+        android:id="@+id/tv_userInfo_name_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre:"
+        android:textColor="@color/Red711"
+        android:textSize="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@+id/tv_userInfo"
+        android:layout_marginTop="26dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="23dp"
+        android:src="@mipmap/ic_lola"
+        android:id="@+id/iv_user_avatar"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_userInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Mi Información"
+        android:textColor="@color/Green711"
+        android:textSize="40dp"
+        android:layout_below="@+id/iv_user_avatar"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_userinfo_username_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre de Usuario:"
+        android:textColor="@color/Red711"
+        android:textSize="30dp"
+        android:layout_alignStart="@id/tv_userInfo_name_title"
+        android:layout_below="@+id/tv_userInfo_name"
+        android:layout_marginTop="52dp" />
+
+    <ImageButton
+        android:id="@+id/ib_back_to_home_userInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/iv_user_avatar"
+        android:background="@android:color/transparent"
+        android:tint="@color/Green711"
+        app:srcCompat="@mipmap/ic_back" />
+
 </RelativeLayout>

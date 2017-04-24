@@ -2,10 +2,120 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_login"
+    android:id="@+id/activity_order"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundColor"
     tools:context="itesm.mobilestore711.OrderActivity">
+
+    <TextView
+        android:id="@+id/tv_store_name_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="tienda"
+        android:textColor="@color/Red711"
+        android:textSize="20sp"
+        android:layout_above="@+id/tv_pickup_date_order_title"
+        android:layout_alignStart="@+id/tv_total_price_order" />
+
+    <TextView
+        android:id="@+id/tv_total_price_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="price"
+        android:textColor="@color/Red711"
+        android:textSize="20sp"
+        android:layout_above="@+id/tv_store_order"
+        android:layout_toEndOf="@+id/tv_pickup_date_order_title"
+        android:layout_marginStart="57dp" />
+
+    <TextView
+        android:id="@+id/tv_pickup_date_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="fecha"
+        android:textColor="@color/Red711"
+        android:textSize="20sp"
+        android:layout_alignBottom="@+id/tv_pickup_date_order_title"
+        android:layout_alignStart="@+id/tv_store_name_order" />
+
+    <TextView
+        android:id="@+id/tv_total_price_title_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Costo:"
+        android:textColor="@color/Orange711"
+        android:textSize="25sp"
+        android:layout_marginTop="42dp"
+        android:layout_marginStart="15dp"
+        android:layout_below="@+id/tv_order_name_order"
+        android:layout_alignParentStart="true" />
+
+    <ImageButton
+        android:id="@+id/ib_back_to_past_orders"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="22dp"
+        android:background="@android:color/transparent"
+        android:src="@mipmap/ic_close"
+        android:tint="@color/Green711" />
+
+    <TextView
+        android:id="@+id/tv_order_name_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Orden"
+        android:textColor="@color/Green711"
+        android:textSize="40sp"
+        android:layout_alignTop="@+id/ib_back_to_past_orders"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/tv_store_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Tienda:"
+        android:textColor="@color/Orange711"
+        android:textSize="25sp"
+        android:layout_below="@+id/tv_total_price_title_order"
+        android:layout_alignStart="@+id/tv_total_price_title_order" />
+
+    <TextView
+        android:id="@+id/tv_pickup_date_order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:maxWidth="152dp"
+        android:layout_marginTop="17dp"
+        android:text="Fecha de Recolección:"
+        android:textColor="@color/Orange711"
+        android:textSize="25sp"
+        android:layout_below="@+id/tv_store_order"
+        android:layout_alignStart="@+id/tv_store_order" />
+
+    <TextView
+        android:id="@+id/tv_products_order_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Productos"
+        android:textColor="@color/Orange711"
+        android:textSize="25sp"
+        android:layout_below="@+id/tv_pickup_date_order_title"
+        android:layout_alignStart="@+id/tv_pickup_date_order_title" />
+
+    <ListView
+        android:id="@+id/lv_products_in_order"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/tv_products_order_title"
+        android:layout_marginTop="18dp" />
+
 
 </RelativeLayout>

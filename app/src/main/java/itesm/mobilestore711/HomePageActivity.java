@@ -101,7 +101,7 @@ public class HomePageActivity extends AppCompatActivity implements SearchView.On
         // Add side menu user information
         tv_name.setText(userInfo.getName());
         tv_username.setText(userInfo.getUsername());
-        img_user_avatar.setImageResource(R.drawable.ic_user_image);
+        img_user_avatar.setImageResource(R.mipmap.ic_lola);
 
         // Add Side menu items
         addDrawerItems();
@@ -122,7 +122,6 @@ public class HomePageActivity extends AppCompatActivity implements SearchView.On
         lv_sidemenu.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                displayMessage(sidemenu_dataset.get(position).getTitle());
                 switch (sidemenu_dataset.get(position).getTitle()){
                     case "Mi Información":
                     {
@@ -134,7 +133,7 @@ public class HomePageActivity extends AppCompatActivity implements SearchView.On
 
                     case "Mis Pedidos":
                     {
-                        Intent ordersIntent = new Intent(HomePageActivity.this,OrderActivity.class);
+                        Intent ordersIntent = new Intent(HomePageActivity.this,PastOrdersActivity.class);
                         HomePageActivity.this.startActivity(ordersIntent);
                         break;
                     }
@@ -236,7 +235,7 @@ public class HomePageActivity extends AppCompatActivity implements SearchView.On
                             products.add(new ProductModel(id,name,amount,price));
                         }
                         // Insert into list
-                        product_adapter = new ProductsAdapter(products,getApplicationContext(),R.layout.products_item);
+                        product_adapter = new ProductsAdapter(products,getApplicationContext(),R.layout.products_item,1);
                         lv_products.setAdapter(product_adapter);
                         product_filter = product_adapter.getFilter();
                     }else{

@@ -45,6 +45,10 @@ public class UserInformation {
         cart = new HashMap<>();
     }
 
+    public void deleteFromCart(String product_id){
+        cart.remove(product_id);
+    }
+
     public void printCart(){
         for (Map.Entry<String, ProductModel> entry : cart.entrySet())
             System.out.println(entry.getValue().getName().concat(Integer.toString(entry.getValue().getAmount())));

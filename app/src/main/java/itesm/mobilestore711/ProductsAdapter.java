@@ -20,6 +20,7 @@ public class ProductsAdapter extends ArrayAdapter<ProductModel> implements View.
     private ArrayList<ProductModel> dataSet;
     public ArrayList<ProductModel> orig;
     Context menu_context;
+    private int type;
 
     // View lookup cache
     private static class ViewHolder {
@@ -28,11 +29,12 @@ public class ProductsAdapter extends ArrayAdapter<ProductModel> implements View.
         ImageView iv_product_image;
     }
 
-    public ProductsAdapter(ArrayList<ProductModel> data, Context context,int layout_type) {
+    public ProductsAdapter(ArrayList<ProductModel> data, Context context,int layout_type,int Type) {
         super(context, layout_type, data);
 
         this.dataSet = data;
         this.menu_context=context;
+        this.type = Type;
 
     }
 
@@ -125,9 +127,15 @@ public class ProductsAdapter extends ArrayAdapter<ProductModel> implements View.
             result=convertView;
         }
 
-        viewHolder.tv_product_name.setText(ProductModel.getName());
-        viewHolder.tv_product_price.setText("$ " + ProductModel.getPrice(1));
-        viewHolder.iv_product_image.setImageResource(R.mipmap.ic_product);
+        if (type == 1) {
+            viewHolder.tv_product_name.setText(ProductModel.getName());
+            viewHolder.tv_product_price.setText("$ " + ProductModel.getPrice(1));
+            viewHolder.iv_product_image.setImageResource(R.mipmap.ic_product);
+        } else if (type == 2){
+            viewHolder.tv_product_name.setText(ProductModel.getName());
+            viewHolder.tv_product_price.setText("Cant. " + ProductModel.getAmount());
+            viewHolder.iv_product_image.setImageResource(R.mipmap.ic_product);
+        }
         //viewHolder.info.setOnClickListener(this);
 
         // Return the completed view to render on screen
