@@ -97,10 +97,10 @@ public class CheckoutActivity extends AppCompatActivity {
                 mTimePicker = new TimePickerDialog(CheckoutActivity.this, new TimePickerDialog.OnTimeSetListener() {
                     @Override
                     public void onTimeSet(TimePicker timePicker, int selectedHour, int selectedMinute) {
-                        if ((hour * 60) + minute + 180 < (selectedHour * 60) + selectedMinute)
+                        //if ((hour * 60) + minute + 180 < (selectedHour * 60) + selectedMinute)
                             et_pickup_time.setText(selectedHour + ":" + selectedMinute);
-                        else
-                            displayMessage("Tiempo de recolección debe ser a partir de 3 horas.");
+                        //else
+                           // displayMessage("Tiempo de recolección debe ser a partir de 3 horas.");
                     }
                 }, hour, minute,false);
                 mTimePicker.setTitle("Escoger Hora");
