@@ -1,8 +1,10 @@
 package itesm.mobilestore711;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
 import android.view.Gravity;
@@ -38,6 +40,7 @@ public class HomePageActivity extends AppCompatActivity implements SearchView.On
     private RelativeLayout rl_side_bar;
     private ListView lv_products;
     private android.widget.SearchView sv_products;
+    private TextView tv_store_name;
 
     // Save User information
     private MobileStoreApp app;
@@ -77,6 +80,7 @@ public class HomePageActivity extends AppCompatActivity implements SearchView.On
         final TextView tv_name = (TextView) findViewById(R.id.tv_name_sidemenu);
         final TextView tv_username = (TextView) findViewById(R.id.tv_username_sidemenu);
         final ImageView img_user_avatar = (ImageView) findViewById(R.id.img_user_avatar);
+        tv_store_name = (TextView) findViewById(R.id.tv_store_name_home);
 
         // Main GUI items
         lv_products = (ListView) findViewById(R.id.lv_products);
@@ -94,6 +98,9 @@ public class HomePageActivity extends AppCompatActivity implements SearchView.On
         app = (MobileStoreApp) getApplicationContext();
         userInfo = app.getUserInformation();
         queue = Volley.newRequestQueue(HomePageActivity.this);
+
+        // Set store name
+        tv_store_name.setText("7/11 ".concat(userInfo.getStore_name()));
 
         // Setup Search
         setupSearchView();
@@ -145,7 +152,45 @@ public class HomePageActivity extends AppCompatActivity implements SearchView.On
                         break;
                     }
 
+                    case "Información de Tienda":
+                    {
+                        Intent storeInfoIntent = new Intent(HomePageActivity.this,StoreInformationActivity.class);
+                        HomePageActivity.this.startActivity(storeInfoIntent);
+                        break;
+                    }
 
+                    case "Cambiar Tienda":
+                    {
+                        new AlertDialog.Builder(HomePageActivity.this)
+                                .setTitle("Cambiar de Tienda")
+                                .setMessage("Si cambia de tienda se vaciará su carrito. \n ¿Desea continuar?")
+                                .setIcon(android.R.drawable.ic_dialog_alert)
+                                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                        Intent storeIntent = new Intent(HomePageActivity.this,StoreActivity.class);
+                                        HomePageActivity.this.startActivity(storeIntent);
+                                    }})
+                                .setNegativeButton("No", null).show();
+                        break;
+                    }
+
+                    case "Cerrar Sesión":
+                    {
+                        new AlertDialog.Builder(HomePageActivity.this)
+                                .setTitle("Cerrar Sesión")
+                                .setMessage("¿Seguro que desea cerrar sesión?")
+                                .setIcon(R.mipmap.ic_logout)
+                                .setPositiveButton("Si", new DialogInterface.OnClickListener() {
+
+                                    public void onClick(DialogInterface dialog, int whichButton) {
+                                        app.deleteUserInformation();
+                                        Intent loginIntent = new Intent(HomePageActivity.this,LoginActivity.class);
+                                        HomePageActivity.this.startActivity(loginIntent);
+                                    }})
+                                .setNegativeButton("No", null).show();
+                        break;
+                    }
                 }
 
                 sidemenu_drawer_layout.addDrawerListener( new DrawerLayout.SimpleDrawerListener(){
@@ -202,6 +247,9 @@ public class HomePageActivity extends AppCompatActivity implements SearchView.On
         sidemenu_dataset.add(new SideMenuItemModel("Mi Información",R.mipmap.ic_info));
         sidemenu_dataset.add(new SideMenuItemModel("Mis Pedidos",R.mipmap.ic_orders));
         sidemenu_dataset.add(new SideMenuItemModel("Carrito",R.mipmap.ic_cart));
+        sidemenu_dataset.add(new SideMenuItemModel("Información de Tienda",R.mipmap.ic_store));
+        sidemenu_dataset.add(new SideMenuItemModel("Cambiar Tienda",R.mipmap.ic_change));
+        sidemenu_dataset.add(new SideMenuItemModel("Cerrar Sesión",R.mipmap.ic_logout));
 
         sidemenu_Adapter = new SideMenuAdapter(sidemenu_dataset,getApplicationContext(),R.layout.side_menu_item);
 

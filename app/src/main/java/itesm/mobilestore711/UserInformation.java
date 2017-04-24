@@ -14,6 +14,7 @@ public class UserInformation {
     private  String id;
     private String store_id;
     private Map<String,ProductModel> cart;
+    private String store_name;
 
     public UserInformation(String Name, String Username, String Id){
         name = Name;
@@ -39,6 +40,10 @@ public class UserInformation {
 
     public void setStore_id(String id) { store_id = id; }
 
+    public String getStore_name() {return store_name;}
+
+    public void setStore_name(String name) { store_name = name; }
+
     public Map<String,ProductModel> getCart() {return cart;}
 
     public void emptyCart(){
@@ -59,6 +64,10 @@ public class UserInformation {
             return cart.get(product_id).getAmount();
         else
             return 0;
+    }
+
+    public boolean isCartEmpty(){
+        return cart.isEmpty();
     }
 
     public void addProduct(String product_name, String product_id, int amount, double price){

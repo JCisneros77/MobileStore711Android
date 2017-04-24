@@ -81,7 +81,8 @@ public class StoreActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 userInfo.setStore_id(stores.get(sp_stores.getSelectedItemPosition()).getId());
-
+                userInfo.setStore_name(stores.get(sp_stores.getSelectedItemPosition()).getName());
+                userInfo.emptyCart();
                 Intent homePageIntent = new Intent(StoreActivity.this,HomePageActivity.class);
                 StoreActivity.this.startActivity(homePageIntent);
             }

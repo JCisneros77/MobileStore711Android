@@ -61,8 +61,12 @@ public class CartActivity extends AppCompatActivity {
         btn_checkout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent checkoutIntent = new Intent(CartActivity.this, CheckoutActivity.class);
-                CartActivity.this.startActivity(checkoutIntent);
+                if (userInfo.isCartEmpty()){
+                    displayMessage("Debes agregar productos a tu carrito.");
+                }else{
+                    Intent checkoutIntent = new Intent(CartActivity.this, CheckoutActivity.class);
+                    CartActivity.this.startActivity(checkoutIntent);
+                }
             }
         });
     }

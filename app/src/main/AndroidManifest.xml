@@ -27,7 +27,8 @@
         <activity android:name=".StoreActivity" />
         <activity android:name=".ProductActivity" />
         <activity android:name=".CheckoutActivity" />
-        <activity android:name=".PastOrdersActivity"></activity>
+        <activity android:name=".PastOrdersActivity" />
+        <activity android:name=".StoreInformationActivity"></activity>
     </application>
 
 </manifest>

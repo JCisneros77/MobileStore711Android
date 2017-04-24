@@ -17,6 +17,16 @@
         android:background="@color/backgroundColor"
         tools:context="itesm.mobilestore711.HomePageActivity">
 
+        <TextView
+            android:id="@+id/tv_store_name_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="store"
+            android:textColor="@color/Green711"
+            android:textSize="40dp"
+            android:layout_below="@+id/sv_products"
+            android:layout_centerHorizontal="true" />
+
 
         <ImageButton
             android:layout_width="wrap_content"

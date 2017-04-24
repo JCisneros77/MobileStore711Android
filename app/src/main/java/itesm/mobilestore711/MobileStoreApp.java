@@ -16,4 +16,8 @@ public class MobileStoreApp extends Application{
     public void setUserInformation(UserInformation o){
         obj = o;
     }
+
+    public void deleteUserInformation(){
+        obj = null;
+    }
 }

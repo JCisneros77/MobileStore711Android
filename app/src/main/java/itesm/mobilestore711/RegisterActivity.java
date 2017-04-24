@@ -58,7 +58,10 @@ public class RegisterActivity extends AppCompatActivity {
 
                 if (password.equals(confirm_password)){
                     // Make request
-                    registerRequest(name,username,password);
+                    if(name.equals("") || username.equals("") || password.equals(""))
+                        displayMessage("Favor de llenar todos los campos.");
+                    else
+                        registerRequest(name,username,password);
                 } else{
                     // Display error Message
                     displayMessage("Contraseña y confirmar contraseña deben ser iguales.");
@@ -85,7 +88,8 @@ public class RegisterActivity extends AppCompatActivity {
                         RegisterActivity.this.startActivity(loginIntent);
 
                     }else{
-                        displayMessage("Registro de Usuario Fallido.");
+                        String message = jsonResponse.getString("message");
+                        displayMessage(message);
                     }
 
                 } catch (JSONException e) {
